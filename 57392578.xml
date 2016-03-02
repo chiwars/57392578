@@ -25,41 +25,50 @@
           </block>
         </value>
         <statement name="DO">
-          <block type="movement_forward" id="175">
+          <block type="oled_cleardisplay" id="331">
             <next>
-              <block type="robot_delay" id="177" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="179">
-                    <field name="NUM">100</field>
-                  </block>
-                </value>
+              <block type="movement_forward" id="175">
                 <next>
-                  <block type="movement_stop" id="190">
+                  <block type="robot_delay" id="177" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="179">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="robot_delay" id="180" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="178">
-                            <field name="NUM">100</field>
-                          </block>
-                        </value>
+                      <block type="movement_stop" id="190">
                         <next>
-                          <block type="variables_set" id="191" inline="true">
-                            <field name="VAR">stepcount</field>
-                            <value name="VALUE">
-                              <block type="math_arithmetic" id="199" inline="true">
-                                <field name="OP">ADD</field>
-                                <value name="A">
-                                  <block type="variables_get" id="203">
-                                    <field name="VAR">stepcount</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="192">
-                                    <field name="NUM">1</field>
-                                  </block>
-                                </value>
+                          <block type="robot_delay" id="180" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="178">
+                                <field name="NUM">100</field>
                               </block>
                             </value>
+                            <next>
+                              <block type="variables_set" id="191" inline="true">
+                                <field name="VAR">stepcount</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id="199" inline="true">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="203">
+                                        <field name="VAR">stepcount</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="192">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_drawtext" id="289">
+                                    <field name="TEXT">forwards</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
@@ -78,23 +87,32 @@
               </block>
             </value>
             <statement name="DO">
-              <block type="movement_reverse" id="250">
+              <block type="oled_cleardisplay" id="340">
                 <next>
-                  <block type="robot_delay" id="251" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="252">
-                        <field name="NUM">100</field>
-                      </block>
-                    </value>
+                  <block type="movement_reverse" id="250">
                     <next>
-                      <block type="movement_stop" id="255">
+                      <block type="robot_delay" id="251" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="252">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
                         <next>
-                          <block type="robot_delay" id="253" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="254">
-                                <field name="NUM">100</field>
+                          <block type="movement_stop" id="255">
+                            <next>
+                              <block type="robot_delay" id="253" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="254">
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_drawtext" id="372">
+                                    <field name="TEXT">backwards</field>
+                                  </block>
+                                </next>
                               </block>
-                            </value>
+                            </next>
                           </block>
                         </next>
                       </block>
