@@ -1,0 +1,10 @@
+{
+    "name": "57392578",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "57392578.xml",
+    "author": "chiwars",
+    "minimum_firmware_version": 42
+}
