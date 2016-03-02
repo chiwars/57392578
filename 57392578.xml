@@ -1,1 +1,14 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="oled_cleardisplay" id="99" x="182" y="64">
+    <next>
+      <block type="variables_set" id="10" inline="true">
+        <field name="VAR">stepcount</field>
+        <value name="VALUE">
+          <block type="math_number" id="17">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>
